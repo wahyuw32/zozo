@@ -1,0 +1,69 @@
+# =====================================================================
+# ## File .gitignore untuk Proyek Express.js / Node.js ##
+# =====================================================================
+
+# 1. Ketergantungan & File Log
+# Direktori ini berisi semua package dari npm dan bisa dibuat ulang dengan 'npm install'
+node_modules/
+# File log npm yang dibuat saat terjadi error
+npm-debug.log*
+yarn-error.log
+
+# 2. Variabel Lingkungan (SANGAT PENTING!)
+# Jangan pernah menyimpan file .env yang berisi kredensial rahasia (kunci API, password database) di Git.
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# File .env.example boleh dimasukkan ke Git sebagai contoh
+!.env.example
+
+# 3. Log Aplikasi
+# Abaikan file log kustom
+logs/
+*.log
+
+# 4. Direktori Hasil Build & File Sementara
+# Direktori output dari build (misalnya dari TypeScript atau bundler)
+dist/
+build/
+.tmp/
+
+# 5. File Sistem Operasi
+# File sistem dari macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# File sistem dari Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# File backup dari beberapa editor Linux
+*~
+
+# 6. Konfigurasi Editor & IDE
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains (WebStorm, etc.)
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# 7. File Laporan Testing & Coverage
+coverage/
+.nyc_output/
+
+# 8. File Khusus Platform Deployment
+# Vercel
+.vercel/
